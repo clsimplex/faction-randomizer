@@ -4,6 +4,8 @@ This is used with the 'Game of Thrones' board game.
 
 ## AS IS and PRs
 
+This is poorly documented. Small efforts may be made. Maybe not.
+
 We may respond, we may not. Enjoy our small thank you to the open source community.
 
 We offer no promises nor documentation.
