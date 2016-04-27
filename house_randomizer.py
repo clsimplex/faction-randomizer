@@ -18,7 +18,9 @@ HOUSES = ['STARK', 'LANNISTER', 'BARATHEON', 'GREYJOY', 'TRYELL', 'MARTELL']
 
 def randomize_houses(names):
 	"""
-	Given a list of names, assign houses to them and return them.
+	Given a list of names assign GOT houses to them.
+
+	Needs minimum of 3 names. Max of 6.
 
 	Returns a dictionary of the form: { PLAYER: HOUSE }
 	"""
