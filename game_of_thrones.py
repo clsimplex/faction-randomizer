@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import sys
+from random import shuffle
 # CL Simplex 2016
 # Levon Zadravec-Powell
 # Eric Moolin
@@ -10,13 +11,11 @@
 # This is a companion for the second edition of the Game of Thrones board game.
 # This is the part where we disclaim any affliation with their copyright and stuff.
 
-import sys
-from random import shuffle
 
 # Order matters.
 HOUSES = ['STARK', 'LANNISTER', 'BARATHEON', 'GREYJOY', 'TRYELL', 'MARTELL']
 
-def randomize_houses(names):
+def randomize(names):
 	"""
 	Given a list of names assign GOT houses to them.
 
@@ -40,4 +39,4 @@ def randomize_houses(names):
 # Main support.
 
 if __name__ == '__main__':
-	print( randomize_houses(sys.argv[1:]) )
+	print( randomize(sys.argv[1:]) )
