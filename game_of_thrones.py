@@ -3,6 +3,7 @@
 import sys
 from random import shuffle
 # CL Simplex 2016
+# Last Updated: April 17 2019
 # Levon Zadravec-Powell
 # Eric Moolin
 # Free Beer License
@@ -31,6 +32,7 @@ def randomize(names):
   # This enforces which houses are available based on the number of players. THIS IS NO LONGER RELEVANT.
   houses_in_use = HOUSES
 
+  # Mother of Dragons expansion
   if(number_of_players > 3):
     houses_in_use.append('TARGARYEN')
 
