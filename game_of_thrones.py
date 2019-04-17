@@ -13,30 +13,33 @@ from random import shuffle
 
 
 # Order matters.
-HOUSES = ['STARK', 'LANNISTER', 'BARATHEON', 'GREYJOY', 'TRYELL', 'MARTELL']
+HOUSES = ['STARK', 'LANNISTER', 'BARATHEON', 'ARRYN', 'GREYJOY', 'TRYELL', 'MARTELL']
 
 def randomize(names):
-	"""
+  """
 	Given a list of names assign GOT houses to them.
 
-	Needs minimum of 3 names. Max of 6.
+	Needs minimum of 3 names. Max of 8.
 
 	Returns a dictionary of the form: { PLAYER: HOUSE }
 	"""
-	number_of_players = len(names)
+  number_of_players = len(names)
 
-	if number_of_players < 3 or number_of_players > 6:
-		raise Exception('Incorrect number of players. You need 3-6.')
+  if number_of_players < 3 or number_of_players > 8:
+    raise Exception('Incorrect number of players. You need 3-8.')
 
-	# This enforces which houses are available based on the number of players.
-	houses_in_use = HOUSES[:number_of_players]
+  # This enforces which houses are available based on the number of players. THIS IS NO LONGER RELEVANT.
+  houses_in_use = HOUSES
 
-	shuffle(houses_in_use)
+  if(number_of_players > 3):
+    houses_in_use.append('TARGARYEN')
 
-	# Generates dictionary using Python list comprehension
-	return { player:houses_in_use.pop() for player in names }
+  shuffle(houses_in_use)
 
-# Main support.
+  # Generates dictionary using Python list comprehension
+  return { player:houses_in_use.pop() for player in names }
+
+  # Main support.
 
 if __name__ == '__main__':
-	print( randomize(sys.argv[1:]) )
+  print(randomize(sys.argv[1:]))
