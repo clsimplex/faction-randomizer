@@ -6,7 +6,7 @@ from random import shuffle
 # Last Updated: April 30 2019
 # Levon Zadravec-Powell
 # Eric Moolin
-# Free Beer License
+# Free Beer / MIT License
 # As is - no warranty. Go away.
 
 # This is a companion for the second edition of the Game of Thrones board game. Mother of Dragons compatible.
